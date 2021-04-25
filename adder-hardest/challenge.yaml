@@ -1,0 +1,21 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: adder-hardest
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  horizontalPodAutoscalerSpec:
+    maxReplicas: 3
+    minReplicas: 2
+    targetCPUUtilizationPercentage: 60
+  network:
+    public: true
+    ports:
+      - protocol: "TCP"
+        port: 8082
+        targetPort: 8082
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: false
+  image: us.gcr.io/cc-ctf-online/adder-hardest-challenge:2978cd75802145da68505c41d24ece8cbc4f9c184cd1852329f88792504ab33b

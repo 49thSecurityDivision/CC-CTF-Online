@@ -1,0 +1,11 @@
+AO-73:
+    Earthstation Charlotte
+    LAT:35.2000°, LON:80.9484°
+    ALT: 220 m ASL
+    April 25, 13:47 UTC Time (9:47am Local time)
+
+    Aim Earthstation Charlotte's Antenna at FUNCube-1 (AO-73)
+    Set the Azimuth and Elevation so the Antenna will line up at April 25, 13:47 UTC Time
+    Antenna Control is on port: 4533
+
+https://www.oceaneering.com/positioning-solutions/geostationary-satellite-calculator/

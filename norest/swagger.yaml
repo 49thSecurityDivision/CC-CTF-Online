@@ -1,0 +1,65 @@
+swagger: '2.0'
+info:
+  description: the big bbq hut auth api
+  version: 1.0.0
+  title: auth microservice
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    email: hello@wesring.com
+  license:
+    name: bsd 3 license
+host: 'localhost:8080'
+basePath: /api
+schemes:
+  - http
+paths:
+  /login:
+    get:
+      summary: Login to the api
+      parameters:
+        - in: query
+          type: string
+          default: testuser
+          name: username
+          description: the username
+          required: true
+        - in: query
+          type: string
+          default: testpassword
+          name: password
+          description: the user password
+          required: true
+      responses:
+        '200':
+          description: login success
+        '401':
+          description: login failure
+  /login/reset:
+    get:
+      summary: reset a user account based off of username
+      parameters:
+        - in: query
+          type: string
+          name: username
+          default: testuser
+          description: takes a username, and sends an email to the username
+          required: true
+      responses:
+        '200':
+          description: email sent
+        '500':
+          description: server error
+        '401':
+          description: username not found
+  /session/verify:
+    get:
+      summary: verify a X-Login-Token cookie
+      parameters:
+        - in: header
+          type: string
+          name: Cookie
+          default: X-Login-Token=<cookievalue>
+          required: true
+      responses:
+        '200':
+          description: it worked

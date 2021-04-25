@@ -1,0 +1,182 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+a:link {
+  color: #ffe843;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #ffe843;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ffe843;
+}
+
+a:active {
+  text-decoration: none;
+  color: #ffe843;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga", "kern";
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: #ffe843;
+}
+
+body {
+  height: 100%;
+  font-family: 'Fredoka One', sans-serif;
+}
+
+header {
+  width: 100%;
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+.header-info {
+  float: right;
+  padding: 10px
+}
+
+.header-info .fa-phone {
+  padding-left: 10px; 
+}
+
+.main-section {
+  text-align: center;
+  font-size: 1.3em;
+  width: 40%;
+  position: relative;
+  left: 30%;
+}
+
+.main-logo {
+  width: 80%;
+  margin: 20px 0px 20px 0px;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  width: 50%;
+  left: 25%;
+  position: relative;
+  margin-top: 50px;
+}
+
+nav a {
+  text-align: center;
+  border-radius: 15px;
+  border-color: #ffe843;
+  font-size: 2em;
+  border-style: solid;
+  cursor: pointer;
+  padding: 10px;
+  width: fit-content;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  margin: 50px 0px 50px 0px;
+  padding-bottom: 30px;
+}
+
+.menu-list {
+  width: 40%;
+  left: 30%;
+  position: relative;
+}
+
+.menu-item {
+  width: 100%;
+  border-style: dashed;
+  border-radius: 15px;
+  margin: 10px 0px 10px 0px;
+  text-align: left;
+  padding: 10px;
+}
+
+.menu-item span {
+  float: right;
+}
+
+.menu-error {
+  text-align: center;
+}
+
+.order-form {
+  width: 100%;
+}
+
+.order-form select, input, button {
+  background-color: black;
+  color: #ffe843;
+  font-family: 'Fredoka One', sans-serif;
+  border-radius: 5px;
+  border-color: #ffe843;
+  border-width: 3px;
+  padding: 5px;
+  margin: 5px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.order-form select:active {
+  border-color: #ffe843;
+  outline: none;
+}
+
+.order-form select:focus {
+  border-color: #ffe843;
+  outline: none;
+}
+
+.order-form input:active {
+  border-color: #ffe843;
+  outline: none;
+}
+
+.order-form input:focus {
+  border-color: #ffe843;
+  outline: none;
+}
+
+.order-form button:active {
+  border-color: #ffe843;
+  outline: none;
+}
+
+.order-form button:focus {
+  border-color: #ffe843;
+  outline: none;
+}
+
+.order-form select {
+  width: 60%;
+}
+
+@media (max-width: 1200px) {
+  .main-logo {
+    width: 60%;
+  }
+  .main-section {
+    width: 90%;
+    left: 5%;
+  }
+  nav {
+    width: 80%;
+    left: 10%;
+  }
+}

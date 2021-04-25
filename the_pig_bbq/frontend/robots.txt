@@ -1,0 +1,2 @@
+User-agent: * Disallow: /hL7K5FsztoA8dx2gDWtaUPvDSX6P7uV7/
+User-agent: * Disallow: /login.html
