@@ -1,3 +1,7 @@
+/*
+Challenge by trvon:
+Special thanks to securisec for challenge updates
+*/
 package main
 
 import (
@@ -7,20 +11,22 @@ import (
 	"encoding/hex"
 	"fmt"
 	"os"
+	"strings"
 )
 
-func getFlag(lore string) {
+func getFlag(lore string) string {
 	key, _ := base64.StdEncoding.DecodeString(lore)
-	// start := strings.Index(string(key), "{SOME START}")
+	start := strings.Index(string(key), "can you find me??")
 	key = []byte(string(key[start : start+32]))
 	pt := ""
 	c, err := aes.NewCipher(key)
 	if err != nil {
 		fmt.Print(err)
-		return
+		return ""
 	}
 	out := make([]byte, len(pt))
 	c.Encrypt(out, []byte(pt))
+	return ""
 }
 
 func getKey(key []byte, flag string) string {
@@ -37,10 +43,7 @@ func getKey(key []byte, flag string) string {
 
 func main() {
 	lore := "SXQgbWF5IHNvdW5kIHN0cmFuZ2UsIGJ1dCB0aGUgd29yZCDigJhiYXJiZWN1ZeKAmSBpcyBhY3R1YWxseSBhIGRlcml2YXRpdmUgb2YgQ2FyaWJiZWFuIGRpYWxlY3QsIGFjY29yZGluZyB0byBTb3V0aGVybiBPcmFsIEhpc3RvcnkuIEJhcmJlY3VlIGNvbWVzIGZyb20gVGFpbm8sIGEgcHJlLUNvbHVtYmlhbiBDYXJpYmJlYW4gbGFuZ3VhZ2UuIFRoZSB3b3JkLCB0aGUgd2Vic2l0ZSBzdGF0ZXMsIGRlc2NyaWJlcyB0aGUgbmF0aXZlIG1ldGhvZCBvZiBjb29raW5nIHNsaWNlZCBtZWF0cyBvdmVyIGFuIG9wZW4gZmxhbWU7IG90aGVyIHNvdXJjZXMgc2F5IGJhcmJhY29hIHNwZWNpZmljYWxseSByZWZlcnJlZCB0byB0aGUgd29vZGVuIGZyYW1lIG9uIHdoaWNoIHRoZSBtZWF0IHdhcyBzbW9rZWQuCg=="
-	if lore == lore {
-		// Then it was used :)
-		fmt.Print("What is the key:\n")
-	}
+	_ = getFlag(lore)
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 
