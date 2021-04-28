@@ -1,0 +1,9 @@
+Secrets divided is a crypto challenge. Someone who is familiar with various forms of cryptography might take a hint from the name `secrets divided` and guess this challenge uses [Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing), a form of cryptography where the data is split into pieces and cannot be reconstructed unless all of the required pieces come together. The challenge provided this data.
+
+`8011ff7088c4b322a4b3e3073787eaa7e2a2017900af670f75ea4100e516cd2b76ffafbf17621e613d7073592faaa98441d281070f42db250bbc81c1659ae194db78a775635a92cfff93d92ae4ad689f30de967f8c9b6d12e209e9e7753ef9ea0d23790320ada61babfbe2ca3da31b38985d44402bad1e035cb2e6aedb340c4e369`
+`802cc95f131676b94b11a48a6b012b754d9f98e6eb56b4cb6d766101fd20b2205d5fbaee1467688fc743bf5cfca5c96e77e145b1ef8bcaafa7de4cb15a4fa5ee42d3b41e19d5a740731048444a413e46a3e7572293a517506c53966407f3ebb707e158e34a7701ad83d0b56a74ce946ca3b8ca94137db6188222a19180457286b3c`
+`803d362f9bd2c59befa2478d5c86c1d2af3d999febf9d3c4189c200118367f0b2ba01551030576eefa33cc05d30f60ea3633c4b6e0d9165aa9e2c8203a7546aa9a9b155b79ff317f8973960eaabc52a99589c7cd1cbe7932893a7903714d168d0e9226f06c9aa0162e1b53904f3d8b743f5588143ce0ad8bd920414f5d617808833`
+
+While linux utilities for SSS exist, I thought more people would try on online tool first. When I searched for one [this](https://iancoleman.io/shamir/) was my first result. Simply entering in the data will yield the flag!
+
+`flag{YClKBeCczdqEM8hv78ikGEv_O7c3-ZUX}`
